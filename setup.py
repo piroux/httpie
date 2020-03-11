@@ -85,6 +85,7 @@ setup(
             'https = httpie.__main__:main',
         ],
     },
+    python_requires='>=3.6',
     extras_require=extras_require,
     install_requires=install_requires,
     tests_require=tests_require,
