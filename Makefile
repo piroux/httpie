@@ -144,7 +144,7 @@ publish-no-test:
 	@echo $(H1)Testing wheel build an installation$(H1END)
 	@echo "$(VERSION)"
 	@echo "$(VERSION)" | grep -q "dev" && echo '!!!Not publishing dev version!!!' && exit 1 || echo ok
-	$(VENV_PYTHON) setup.py sdist bdist_wheel
+	$(VENV_PYTHON) setup.py sdist bdist_wheel --python-tag py3
 	$(VENV_BIN)/twine upload dist/*
 	@echo
 
